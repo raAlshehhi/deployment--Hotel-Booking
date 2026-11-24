@@ -603,7 +603,7 @@ if page == "Overview":
 
                         st.plotly_chart(
                             format_chart(fig),
-                            use_container_width=True
+                            width="stretch"
                         )
 
                     with right:
@@ -641,7 +641,7 @@ if page == "Overview":
 
                         st.plotly_chart(
                             format_chart(fig),
-                            use_container_width=True
+                            width="stretch"
                         )
 
                     valid_rates = filtered[
@@ -1049,7 +1049,7 @@ elif page == "Predict a Booking":
 
             st.plotly_chart(
                 format_chart(gauge),
-                use_container_width=True
+                width="stretch"
             )
 
         with right:
@@ -1114,7 +1114,7 @@ elif page == "Predict a Booking":
         with st.expander("View the booking details"):
             st.dataframe(
                 result["booking"],
-                use_container_width=True,
+                width="stretch",
                 hide_index=True
             )
 
@@ -1198,7 +1198,7 @@ else:
             "Recall": "{:.2%}",
             "F1": "{:.2%}"
         }),
-        use_container_width=True,
+        width="stretch",
         hide_index=True
     )
 
@@ -1233,7 +1233,7 @@ else:
 
     st.plotly_chart(
         format_chart(fig),
-        use_container_width=True
+        width="stretch"
     )
 
     with st.expander("What do the scores mean?"):
@@ -1290,7 +1290,7 @@ else:
             pd.DataFrame({
                 "Input column": FEATURES
             }),
-            use_container_width=True,
+            width="stretch",
             hide_index=True
         )
 
