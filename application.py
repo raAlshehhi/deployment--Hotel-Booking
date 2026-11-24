@@ -184,7 +184,7 @@ def format_chart(fig):
 # Load the saved pipeline.
 @st.cache_resource
 def load_model(path, modified_time):
-    return None
+    return joblib.load(path)
 
 
 classifier = None
