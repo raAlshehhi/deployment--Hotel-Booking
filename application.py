@@ -198,7 +198,7 @@ def load_model(path, modified_time):
                 flush=True
             )
 
-    model = joblib.load(path)
+    model = joblib.load(path, mmap_mode="r")
 
     print("Model loaded successfully", flush=True)
     return model
