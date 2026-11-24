@@ -1130,9 +1130,9 @@ elif page == "Predict a Booking":
         with st.expander("View the booking details"):
             st.dataframe(
                 result["booking"],
-                width="stretch",
+                use_container_width=True,
                 hide_index=True
-            )
+)
 
         st.caption(
             "Showing the last submitted booking. "
