@@ -184,8 +184,24 @@ def format_chart(fig):
 # Load the saved pipeline.
 @st.cache_resource
 def load_model(path, modified_time):
-    return joblib.load(path)
+    print("Starting model loading", flush=True)
 
+    limit_file = Path("/sys/fs/cgroup/memory.max")
+
+    if limit_file.exists():
+        limit = limit_file.read_text().strip()
+
+        if limit != "max":
+            print(
+                f"Cloud memory limit: "
+                f"{int(limit) / (1024 ** 3):.2f} GiB",
+                flush=True
+            )
+
+    model = joblib.load(path)
+
+    print("Model loaded successfully", flush=True)
+    return model
 
 classifier = None
 model_error = None
