@@ -1,5 +1,3 @@
-﻿# deployment--Hotel-Booking
-
 # StayWise — Hotel Booking Cancellation Prediction
 
 **Course:** Data Science for Business Applications
