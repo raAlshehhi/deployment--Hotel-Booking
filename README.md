@@ -8,6 +8,10 @@ StayWise estimates whether a hotel booking may be canceled. The project combines
 
 ## Business problem
 
+**Business Question:**
+Which hotel bookings are likely to be canceled, so hotel staff can prioritize confirmation follow-ups and improve room availability planning?
+
+
 Cancellations make it difficult for hotels to plan occupancy, staffing, and expected revenue. Estimating cancellation risk can help staff prioritize confirmation calls and other follow-up activities.
 
 Predictions support staff judgment; they do not guarantee a guest's future behavior.
